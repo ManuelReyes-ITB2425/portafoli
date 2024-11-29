@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio personal de Manel y Gerson con proyectos y contacto">
+    <meta name="author" content="Manel y Gerson">
+    <title>Proyecto 1 - Mi Portafolio</title>
+
+    <!-- Enlazar el archivo CSS general -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Enlazar el archivo CSS específico para la página del proyecto -->
+    <link rel="stylesheet" href="proyecto.css">
+</head>
+<body>
+<header class="navbar">
+    <nav>
+        <ul>
+            <li><a href="index.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="proyecto-individual">
+    <div class="container">
+        <h2>Proyecto 1: Listas de tareas</h2>
+
+        <div class="proyecto-contenido">
+            <div class="descripcion">
+                <h3>Descripción del proyecto</h3>
+                <p> Es una aplicación web sencilla diseñada para ayudar a los usuarios a gestionar sus tareas diarias. Permite a los usuarios añadir, editar y marcar tareas como completadas, ayudándoles a mantenerse organizados y productivos. He utilizado las siguientes tecnologias.</p>
+                <ul>
+                    <li>Frontend: HTML5, CSS3, JavaScript</li>
+                    <li>Almacenamiento Local: LocalStorage para guardar las tareas del usuario en el navegador</li>
+                </ul>
+
+                <h3>Futuras mejoras</h3>
+                <p>Me he planteado añadirle diferentes funcionalidades nuevas.</p>
+                <Ul>
+                    <li>Sincronización en la Nube: Implementar una funcionalidad que permita a los usuarios sincronizar sus tareas en la nube para acceder a ellas desde diferentes dispositivos.</li>
+                    <li>Subtareas: Permitir a los usuarios crear subtareas dentro de una tarea principal para una organización más detallada.</li>
+                    <li>Integración con Calendarios: Integrar la aplicación con Google Calendar, Outlook, y otros servicios de calendario para visualizar las tareas junto con otros eventos.</li>
+                    <li>Exportación e Importación: Permitir a los usuarios exportar e importar sus listas de tareas en formatos como CSV o JSON para mayor flexibilidad.</li>
+                </Ul>
+                <a href="https://github.com/tu-usuario/tu-repositorio" target="_blank">Ver código en GitHub</a>
+            </div>
+
+            <div class="imagen-funcionalidades">
+                <img src="lista.jpg" alt="Imagen principal del Proyecto 1">
+                <h3>Funcionalidades</h3>
+                <p>Funcionalidades del proyecto:</p>
+                <ul>
+                    <li>Añadir Tareas: Los usuarios pueden añadir nuevas tareas escribiendo el nombre de la tarea en un campo de entrada y haciendo clic en un botón para agregarla a la lista.</li>
+                    <li>Editar Tareas: Los usuarios pueden editar las tareas existentes para cambiar el nombre o la descripción.</li>
+                    <li>Marcar como Completadas: Los usuarios pueden marcar las tareas como completadas, lo que las tacha de la lista pero las mantiene</li>
+                    <li>Eliminar Tareas: Los usuarios pueden eliminar tareas que ya no son necesarias.</li>
+                    <li>Filtrar Tareas: Los usuarios pueden filtrar las tareas para ver todas, solo las completadas, o solo las pendientes.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© Hecho por Manel y Gerson</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const nav = document.querySelector("nav");
+
+    // Añadir la clase 'active' al menú de navegación cuando se carga la página
+    setTimeout(() => {
+        nav.classList.add("active");
+    }, 500); // Ajusta el retraso según sea necesario
+});
+
+</script>
+
+<script src="script.js"></script>
+<script src="proyecto.js"></script>
+
+
+</body>
+</html>

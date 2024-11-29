@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi-portafolio - Proyectos</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+          rel="stylesheet">
+
+
+</head>
+
+<body>
+    <!-- Menú de navegación -->
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Proyectos -->
+    <section id="proyectos">
+        <h2 class="titulo-seccion">Mis proyectos</h2>
+        <div class="lista-proyectos">
+            <!-- Proyecto 1 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto1.jpg');">
+                    <a href="proyecto1.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto1.html" class="enlace-proyecto">Lista de tareas</a></h3>
+                <p>
+                    Listado de tareas personal web.
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Permite a los usuarios añadir, editar y marcar tareas como completadas, ayudándoles a mantenerse organizados y productivos.
+                </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto2.jpg');">
+                    <a href="proyecto2.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto2.html" class="enlace-proyecto">Agenda virtual</a></h3>
+                <p>
+                    destinada a organizar y gestionar eventos virtuales.
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Podemos crear, administrar y asistir a eventos en línea, facilitando la interacción y colaboración entre los participantes a través de diversas herramientas y funciones integradas.
+                </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto3.jpg');">
+                    <a href="proyecto3.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto3.html" class="enlace-proyecto">Proyecto 3</a></h3>
+                <p>
+                    Una breve descripción del proyecto...
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Proximamente
+                </div>
+            </div>
+
+            <!-- Proyecto 4 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto4.jpg');">
+                    <a href="proyecto4.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto4.html" class="enlace-proyecto">Proyecto 4</a></h3>
+                <p>
+                    Una breve descripción del proyecto...
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Proximamente
+                </div>
+            </div>
+
+            <!-- Proyecto 5 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto5.jpg');">
+                    <a href="proyecto5.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto5.html" class="enlace-proyecto">Proyecto 5</a></h3>
+                <p>
+                    Una breve descripción del proyecto...
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Proximamente
+                </div>
+            </div>
+
+            <!-- Proyecto 6 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto6.jpg');">
+                    <a href="proyecto6.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto6.html" class="enlace-proyecto">Proyecto 6</a></h3>
+                <p>
+                    Una breve descripción del proyecto...
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Proximamente
+                </div>
+            </div>
+
+            <!-- Proyecto 7 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto7.jpg');">
+                    <a href="proyecto7.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto7.html" class="enlace-proyecto">Proyecto 7</a></h3>
+                <p>
+                    Una breve descripción del proyecto...
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Proximamente
+                </div>
+            </div>
+
+            <!-- Proyecto 8 -->
+            <div class="proyecto">
+                <div class="imagen-proyecto" style="background-image: url('proyecto8.jpg');">
+                    <a href="proyecto8.html" class="enlace-proyecto"></a>
+                </div>
+                <h3><a href="proyecto8.html" class="enlace-proyecto">Proyecto 8</a></h3>
+                <p>
+                    Una breve descripción del proyecto...
+                    <button class="ver-mas" onclick="toggleInfo(this)">Más</button>
+                </p>
+                <div class="info-adicional">
+                    Proximamente
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Si necesitamos más secciones o un pie de página -->
+    <footer>
+        <p>© 2024 Mi Portafolio</p>
+    </footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.querySelector("nav");
+    const projectList = document.querySelector(".lista-proyectos");
+    const title = document.querySelector(".titulo-seccion");
+
+    // Añadir clase 'active' al menú de navegación
+    setTimeout(() => {
+        nav.classList.add("active");
+    }, 500); // Animación del menú
+
+    // Añadir clase 'active' a la lista de proyectos
+    setTimeout(() => {
+        projectList.classList.add("active");
+    }, 2100); // Animación de los proyectos
+
+    // Mostrar el título letra por letra después de las animaciones
+    setTimeout(() => {
+        escribirTitulo("Mis proyectos", title);
+        title.classList.add("visible"); // Añadir la clase visible después de animar el título
+    }, 2200); // Ajusta según el tiempo total necesario
+});
+
+// Función para animar la escritura del título con requestAnimationFrame
+function escribirTitulo(texto, elemento) {
+    elemento.textContent = ""; // Vaciar el contenido antes de empezar
+    let i = 0;
+
+    function animar() {
+        if (i < texto.length) {
+            elemento.textContent += texto.charAt(i);
+            i++;
+            requestAnimationFrame(animar); // Llamada recursiva con requestAnimationFrame
+        }
+    }
+
+    requestAnimationFrame(animar); // Iniciar la animación
+}
+
+// Función para alternar la visibilidad de la información adicional
+function toggleInfo(element) {
+    const card = element.closest(".proyecto");
+    const info = card.querySelector(".info-adicional");
+
+    if (info && info.classList.contains("info-adicional")) {
+        if (info.style.maxHeight && info.style.maxHeight !== "0px") {
+            info.style.maxHeight = "0px";
+            info.classList.remove("show");
+            element.textContent = "Más";
+        } else {
+            info.style.maxHeight = info.scrollHeight + "px";
+            info.classList.add("show");
+            element.textContent = "Menos";
+        }
+    }
+}
+
+</script>
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>

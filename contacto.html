@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contacto">
+        <h1>Contacto</h1>
+        <div class="container">
+            <div class="contact-info">
+                <p><strong>Correo electrónico:</strong> <a href="mailto:reyeschmanuel@gmai.com">reyeschmanuel@gmail.com</a></p>
+                <p><strong>Número de contacto:</strong> <a href="tel:+1234567890">+34 653325366</a></p>
+            </div>
+
+            <form id="contactForm" method="post">
+                <label for="nombre">Nombre y Apellidos:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <span id="nombreError" style="color: red;"></span><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <span id="emailError" style="color: red;"></span><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+                <span id="telefonoError" style="color: red;"></span><br>
+
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Mi Portafolio</p>
+    </footer>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+    const nav = document.querySelector("nav");
+
+    // Añadir la clase 'active' al menú de navegación cuando se carga la página
+    setTimeout(() => {
+        nav.classList.add("active");
+    }, 500); // Ajusta el retraso según sea necesario
+
+    // Efecto de scroll suave para enlaces internos (anclas)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Animaciones al cargar la página: Desvanecimiento de los elementos principales
+    const fadeElements = document.querySelectorAll('.proyecto-individual-section, .proyecto-individual-titulo, .proyecto-individual-descripcion, .proyecto-individual-imagen-funcionalidades');
+
+    fadeElements.forEach(el => {
+        el.style.opacity = 0;
+        el.style.transform = 'translateY(20px)';
+    });
+
+    // Función para hacer que los elementos aparezcan con una animación de desvanecimiento
+    window.addEventListener('scroll', () => {
+        fadeElements.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) {
+                el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                el.style.opacity = 1;
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    });
+
+    // Modal para la imagen del proyecto
+    const projectImage = document.querySelector('.proyecto-individual-imagen');
+    const modal = document.createElement('div');
+    modal.classList.add('modal');
+    const modalImage = document.createElement('img');
+    modal.appendChild(modalImage);
+    document.body.appendChild(modal);
+
+    projectImage.addEventListener('click', () => {
+        modalImage.src = projectImage.src;
+        modal.style.display = 'flex'; // Mostrar el modal
+    });
+
+    modal.addEventListener('click', () => {
+        modal.style.display = 'none'; // Ocultar el modal cuando se hace clic fuera de la imagen
+    });
+});
+
+</script>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>

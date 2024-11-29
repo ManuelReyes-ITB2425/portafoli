@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="index">
+<header class="navbar">
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Sobre mí</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="presentacion" class="section">
+    <h1>Bienvenido a mi portafolio</h1>
+    <p>Hola, soy Manel.</p>
+</section>
+
+<section id="contenido">
+    <div class="bloque">
+        <h2>Sobre mí</h2>
+        <div class="foto-cv">
+            <img src="fotomia.jpg" alt="Foto de Manel">
+        </div>
+        <p>Mi nombre es Manuel, soy estudiante de ASIX en el instituto tecnologico de Barcelona. Me encanta el mundo de las tecnologias y ciberseguridad, por ello, estudio esta rama, sobre todo por curiosidad de aprender algo totalmente distinto a lo que estoy acostumbrado. Por eso, he creado este portafolio, para enseñarte mis futuros y mas actuales proyectos..</p>
+    </div>
+    <div class="bloque">
+        <h2>Proyectos Destacados</h2>
+        <div class="proyectos">
+            <div class="proyecto">
+                <img src="pythonlogo.png" alt="Imagen del Proyecto 1">
+                <h3><a href="proyecto1.html">Procesar dades</a></h3>
+                <p>En este proyecto me pude iniciar en python, creando un programa que pueda procesar datos de un formulario.</p>
+            </div>
+            <div class="proyecto">
+                <img src="angularlogo.png" alt="Imagen del Proyecto 2">
+                <h3><a href="proyecto2.html">agenda virtual</a></h3>
+                <p>es una aplicación web destinada a organizar y gestionar eventos virtuales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<div>
+
+<footer>
+    <p>© Hecho por Manel y Gerson</p>
+</footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const nav = document.querySelector(".menu");
+
+        // Añadir la clase 'active' al menú de navegación cuando se carga la página
+        setTimeout(() => {
+            nav.classList.add("active");
+        }, 500); // Ajusta el retraso según sea necesario
+    });
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
