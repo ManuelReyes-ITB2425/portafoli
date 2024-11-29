@@ -1,17 +1,18 @@
-/* Estilos generales */
+/* Estilo index */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-<<<<<<< HEAD
-    margin-top: 30px; /* Ajusta este valor según la altura del header */
-=======
-    margin-top: 60px; /* Ajusta este valor según la altura del header */
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; /* Estructura el contenido en una columna */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-color: #ffffff;
+    color: #283747;
 }
 
-/* Estilo específico para el título principal en index */
+/* Estilo para el título principal en index */
 .index h1 {
     margin-top: 50px; /* Baja el título principal */
 }
@@ -30,6 +31,9 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
     cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 8px; /* Bordes ligeramente redondeados */
 }
 
 .index .section:hover {
@@ -40,64 +44,61 @@ body {
 /* Contenedor principal del contenido */
 #contenido {
     display: flex;
-    justify-content: space-between; /* Espacia las dos mitades (bloques) */
-    gap: 20px; /* Espaciado entre las mitades */
-    width: 100%; /* Abarca todo el ancho */
-    margin: 0 auto; /* Centra el contenido */
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
-    box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+    box-sizing: border-box;
 }
 
-/* Bloques de contenido (las dos mitades) */
+/* Bloques de contenido en dos mitades */
 #contenido .bloque {
-    flex: 1; /* Ambas mitades ocupan el mismo ancho */
+    flex: 1;
     padding: 20px;
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición para el zoom */
-    background: #fff; /* Fondo blanco */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-    overflow: hidden; /* Evita que se desborde el contenido al hacer zoom */
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 /* Efecto de zoom al pasar el ratón */
 #contenido .bloque:hover {
-    transform: scale(1.05); /* Efecto de zoom */
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Ajustes para las imágenes dentro de los bloques */
+/* Ajustes de las imágenes dentro de los bloques */
 #contenido .bloque img {
-    width: 100%; /* Imagen ocupa todo el ancho del bloque */
-    height: auto; /* Mantiene las proporciones */
-    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 /* Contenedor de proyectos destacados */
 body.index #contenido .proyectos {
     display: flex;
-    justify-content: center; /* Centra los proyectos horizontalmente */
-    gap: 20px; /* Espacio entre los proyectos */
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
 }
 
 /* Configuración para cada proyecto */
 body.index .proyecto {
-    width: 100%; /* Cada proyecto ocupará el 50% del contenedor */
-    text-align: center; /* Centra el texto */
+    width: 100%;
+    text-align: center;
     padding: 100px;
-
 }
 
 /* Imágenes dentro de cada proyecto */
 body.index .proyecto img {
-    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-    height: auto; /* Mantiene la proporción de la imagen */
+    width: 100%;
+    height: auto;
 }
 
-
 header {
-    background-color: #000000;
+    background-color: #283747; /* Azul oscuro para el header */
     color: white;
     padding: 10px 0;
     text-align: center;
@@ -108,53 +109,52 @@ header {
     z-index: 10;
 }
 
-/* Hacer el menú de navegación más grueso */
+/* menú de navegación mas grueso */
 nav {
-    height: 0; /* Altura inicial */
-    background-color: black;
+    height: 0;
+    background-color: #283747;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
-    transition: height 1s ease-in-out; /* Transición suave para la altura */
+    transition: height 1s ease-in-out;
 }
 
 /* Estilo inicial de los elementos del menú */
 nav ul {
-    list-style: none; /* Eliminar viñetas */
-    display: flex; /* Alinear elementos en fila */
+    list-style: none;
+    display: flex;
     padding: 0;
     margin: 0;
-    opacity: 0; /* Inicialmente oculto */
-    transition: opacity 1s ease-in-out; /* Transición suave para la opacidad */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 nav ul li {
-    margin: 0 38px; /* Espaciado horizontal entre los elementos */
+    margin: 0 38px;
 }
 
 nav ul li a {
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-    color: white; /* Color del texto */
-    text-decoration: none; /* Eliminar subrayado */
-    font-size: 18px; /* Tamaño de fuente */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
     font-family: "Crimson Text", serif;
     font-weight: 700;
     font-style: normal;
-
 }
 
 /* Estado cuando el menú está activo */
 nav.active {
-    background-color: rgb(30, 30, 30); /* Fondo sutil cuando aparece */
-    height: 80px; /* Altura final */
+    background-color: #34495e;
+    height: 80px;
 }
 
 nav.active ul {
-    opacity: 1; /* Mostrar elementos del menú */
+    opacity: 1;
 }
 
 nav.active ul li:nth-child(1) a {
@@ -179,106 +179,89 @@ nav.active ul li:nth-child(3) a {
     margin-top: 60px;
     padding: 20px;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f4f4f4; /* Gris claro para la sección de presentación */
 }
 
 #contenido {
     display: flex;
+    justify-content: space-between;
     gap: 20px;
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    box-sizing: border-box;
+    flex: 1;
 }
 
 .bloque {
     flex: 1;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Gris claro para los bloques */
     border: 1px solid #ddd;
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: #333;
+    background-color: #283747; /* Azul oscuro para el footer */
     color: white;
+    margin-top: auto;
 }
+
 .proyectos {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .proyecto {
     width: 45%;
     margin-bottom: 20px;
     text-align: center;
 }
+
 .proyecto img {
     max-width: 100%;
     height: auto;
 }
 
-<<<<<<< HEAD
 .foto-cv img {
-    width: 240px !important;
-    height: 240px !important;
+    width: 250px !important;
+    height: 250px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
     display: block !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1) !important;
-    border: 2px solid #ddd !important;
+    margin: 0 auto !important;
 }
 
-footer {
-  padding: 20px;
-  text-align: center;
-  background: #black;
-=======
-.foto-circular {
-    width: 200px;  /* Puedes ajustar el tamaño según prefieras */
-    height: 200px; /* Asegúrate de que el ancho y el alto sean iguales */
-    border-radius: 50%;
-    object-fit: cover; /* Esto asegurará que la imagen se ajuste bien dentro del círculo */
-    border: 2px solid #000; /* Opcional: puedes añadir un borde para resaltar la imagen */
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
-}
+/* Estilo para "contacto" */
 
-/* Estilos para la página de contacto */
 #contacto h1 {
     text-align: center;
     font-size: 3em;
-<<<<<<< HEAD
     margin-top: 120px; /* Separación con el menú */
     margin-bottom: 40px; /* Separación adicional con el contenido */
-=======
-    margin-top: 60px;
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
+    color: #283747; /* Azul oscuro para el título */
 }
+
 .container {
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
-    align-items: flex-start; /* Alinear contenido desde el inicio */
-    height: auto; /* Ajustar la altura automáticamente */
-    padding-bottom: 60px; /* Espacio debajo para evitar que el formulario quede tapado */
-=======
-    align-items: center;
-    height: 60vh;
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
+    align-items: flex-start;
+    height: auto;
+    padding-bottom: 60px;
 }
+
 .contact-info {
-    border: 1px solid #ccc;
+    border: 1px solid #eeeeee; /* Borde gris claro */
     padding: 20px;
     width: 50%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff; /* Fondo blanco */
 }
-<<<<<<< HEAD
 
 /* Formulario */
-=======
-/*Formulario*/
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
+
 #contacto .container {
     display: flex;
     flex-direction: column;
@@ -292,10 +275,10 @@ footer {
 #contacto form {
     order: 2;
     width: 50%;
-    border: 1px solid #ddd;
+    border: 1px solid #eeeeee; /* Borde gris claro */
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #ffffff; /* Fondo blanco */
     margin-top: 20px;
 }
 
@@ -306,6 +289,7 @@ footer {
 }
 
 /* Campos de texto */
+
 #contacto form input[type="text"],
 #contacto form input[type="email"],
 #contacto form input[type="tel"] {
@@ -329,7 +313,7 @@ footer {
 /* Estilo para el botón */
 #contacto form input[type="submit"] {
     padding: 10px 20px;
-    background-color: #000;
+    background-color: #283747;
     color: white;
     border: none;
     border-radius: 5px;
@@ -338,13 +322,11 @@ footer {
 }
 
 #contacto form input[type="submit"]:hover {
-    background-color: #333;
-    transform: scale(1.05); /* Pequeña animación al pasar el ratón */
+    background-color: #34495e;
+    transform: scale(1.05);
 }
-<<<<<<< HEAD
 
-
-/* Estilos iniciales para los proyectos */
+/* Estilos para los proyectos */
 .lista-proyectos .proyecto {
     opacity: 0; /* Empieza invisible */
     transform: translateY(-20px); /* Empieza ligeramente desplazado hacia arriba */
@@ -405,8 +387,6 @@ footer {
     transition-delay: 0.8s; /* Retraso para el octavo proyecto */
 }
 
-=======
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
 /* Contenedor de los proyectos */
 .lista-proyectos {
     display: grid;
@@ -441,7 +421,7 @@ footer {
   font-style: normal;
 }
 
-/* Esto se añadirá cuando el título ya se haya animado */
+/* Animaciones al titulo cuando aparezca */
 .titulo-seccion.visible {
     opacity: 1; /* Mantener opacidad visible */
     animation: typing 3s ease-in-out forwards, glow 1s ease-out forwards;
@@ -520,7 +500,7 @@ footer {
 .proyecto h3 {
     font-size: 18px;
     margin: 10px 15px;
-    color: #333; /* Color de texto oscuro */
+    color: #333;
     text-align: center;
     flex-shrink: 0; /* Evita que se ajuste el tamaño del texto */
     font-family: "Crimson Text", serif;
@@ -531,7 +511,7 @@ footer {
 .proyecto p {
     font-size: 14px;
     margin: 10px 15px;
-    color: #666; /* Color de texto más claro */
+    color: #666;
     flex-grow: 1; /* Asegura que la descripción ocupe el espacio restante */
     overflow: hidden; /* Evitar desbordamiento */
     text-overflow: ellipsis;
@@ -561,14 +541,14 @@ footer {
     font-style: normal;
 }
 
-/* Estilo para las sombras y el efecto 2,5D */
+/* Estilo para las sombras y efectos */
 .proyecto:hover {
     transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto flotante */
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
-/* Sombra animada al hacer hover */
+/* Sombra animada */
 .proyecto:hover {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
 }
@@ -603,7 +583,7 @@ footer {
     font-style: normal;
 }
 
-/* Efecto de hover para el botón */
+/* Efecto para el botón */
 .ver-mas:hover {
     background-color: #007BFF;
     color: #fff;
@@ -634,7 +614,7 @@ footer {
     }
 }
 
-/* Responsive: Ajusta columnas en pantallas más pequeñas */
+/* Responsive */
 @media (max-width: 992px) {
     .lista-proyectos {
         grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablets */
@@ -652,103 +632,3 @@ footer {
         grid-template-columns: 1fr; /* 1 columna en móviles pequeños */
     }
 }
-
-<<<<<<< HEAD
-=======
-/* ... estilos proyecto 1 ... */
-
-#proyecto1 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#proyecto1 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.proyecto-contenido {
-    display: flex; /* Usamos flexbox para las dos columnas */
-    gap: 20px; /* Espacio entre las columnas */
-    width: 100%;
-}
-
-.descripcion {
-    flex: 1; /* La descripción ocupa la mitad del espacio disponible */
-}
-
-.imagen-funcionalidades {
-    flex: 1; /* La imagen y las funcionalidades ocupan la otra mitad */
-    display: flex;
-    flex-direction: column; /* Apilamos la imagen y el texto verticalmente */
-    align-items: center; /* Centramos la imagen */
-}
-
-.imagen-funcionalidades img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-body {
-    display: flex;
-    min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la pantalla */
-    flex-direction: column; /* Apila header, contenido y footer verticalmente */
-}
-
-#contenido { /* O el ID del contenedor principal de tu página */
-    flex: 1; /* El contenido se expande para ocupar el espacio disponible */
-}
-
-/* ... estilos proyecto 2 ... */
-
-#proyecto2 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#proyecto2 h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.proyecto-contenido {
-    display: flex; /* Usamos flexbox para las dos columnas */
-    gap: 20px; /* Espacio entre las columnas */
-    width: 100%;
-}
-
-.descripcion {
-    flex: 1; /* La descripción ocupa la mitad del espacio disponible */
-}
-
-.imagen-funcionalidades {
-    flex: 1; /* La imagen y las funcionalidades ocupan la otra mitad */
-    display: flex;
-    flex-direction: column; /* Apilamos la imagen y el texto verticalmente */
-    align-items: center; /* Centramos la imagen */
-}
-
-.imagen-funcionalidades img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-body {
-    display: flex;
-    min-height: 100vh; /* Asegura que el body ocupe al menos la altura de la pantalla */
-    flex-direction: column; /* Apila header, contenido y footer verticalmente */
-}
-
-#contenido { /* O el ID del contenedor principal de tu página */
-    flex: 1; /* El contenido se expande para ocupar el espacio disponible */
-}
-
->>>>>>> parent of 050337b (iconos redes + paleta de colores + errores titulos)
