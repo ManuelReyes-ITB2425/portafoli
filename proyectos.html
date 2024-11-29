@@ -7,21 +7,23 @@
     <title>Mi-portafolio - Proyectos</title>
     <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-          rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Menú de navegación -->
     <header class="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Sobre mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="menu">
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="logopropio.jpg" alt="Logo" id="logo">
+                </a>
+                <ul class="nav-list">
+                    <li><a href="index.html">Sobre mí</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -157,7 +159,6 @@
     </footer>
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector("nav");
     const projectList = document.querySelector(".lista-proyectos");
@@ -213,13 +214,8 @@ function toggleInfo(element) {
         }
     }
 }
-
 </script>
 
 <script src="script.js"></script>
-
-
 </body>
-
-
 </html>

@@ -15,12 +15,17 @@
 </head>
 <body>
 <header class="navbar">
-    <nav>
-        <ul>
-            <li><a href="index.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+    <nav class="menu">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="logopropio.jpg" alt="Logo" id="logo">
+            </a>
+            <ul class="nav-list">
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 
@@ -39,12 +44,12 @@
 
                 <h3>Futuras mejoras</h3>
                 <p>Me he planteado añadirle diferentes funcionalidades nuevas.</p>
-                <Ul>
+                <ul>
                     <li>Sincronización en la Nube: Implementar una funcionalidad que permita a los usuarios sincronizar sus tareas en la nube para acceder a ellas desde diferentes dispositivos.</li>
                     <li>Subtareas: Permitir a los usuarios crear subtareas dentro de una tarea principal para una organización más detallada.</li>
                     <li>Integración con Calendarios: Integrar la aplicación con Google Calendar, Outlook, y otros servicios de calendario para visualizar las tareas junto con otros eventos.</li>
                     <li>Exportación e Importación: Permitir a los usuarios exportar e importar sus listas de tareas en formatos como CSV o JSON para mayor flexibilidad.</li>
-                </Ul>
+                </ul>
                 <a href="https://github.com" target="_blank">Ver código en GitHub</a>
             </div>
 
@@ -55,7 +60,7 @@
                 <ul>
                     <li>Añadir Tareas: Los usuarios pueden añadir nuevas tareas escribiendo el nombre de la tarea en un campo de entrada y haciendo clic en un botón para agregarla a la lista.</li>
                     <li>Editar Tareas: Los usuarios pueden editar las tareas existentes para cambiar el nombre o la descripción.</li>
-                    <li>Marcar como Completadas: Los usuarios pueden marcar las tareas como completadas, lo que las tacha de la lista pero las mantiene</li>
+                    <li>Marcar como Completadas: Los usuarios pueden marcar las tareas como completadas, lo que las tacha de la lista pero las mantiene.</li>
                     <li>Eliminar Tareas: Los usuarios pueden eliminar tareas que ya no son necesarias.</li>
                     <li>Filtrar Tareas: Los usuarios pueden filtrar las tareas para ver todas, solo las completadas, o solo las pendientes.</li>
                 </ul>
@@ -77,12 +82,9 @@
         nav.classList.add("active");
     }, 500); // Ajusta el retraso según sea necesario
 });
-
 </script>
 
 <script src="script.js"></script>
 <script src="proyecto.js"></script>
-
-
 </body>
 </html>

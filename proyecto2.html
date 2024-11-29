@@ -15,12 +15,17 @@
 </head>
 <body>
 <header class="navbar">
-    <nav>
-        <ul>
-            <li><a href="index.html">Sobre mí</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
+    <nav class="menu">
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="logopropio.jpg" alt="Logo" id="logo">
+            </a>
+            <ul class="nav-list">
+                <li><a href="index.html">Sobre mí</a></li>
+                <li><a href="proyectos.html">Proyectos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 
@@ -31,7 +36,7 @@
         <div class="proyecto-contenido">
             <div class="descripcion">
                 <h3>Descripción del proyecto</h3>
-                <p>es una aplicación web destinada a organizar y gestionar eventos virtuales. Permite a los usuarios crear, administrar y asistir a eventos en línea, facilitando la interacción y colaboración entre los participantes a través de diversas herramientas y funciones integradas. Utiliza las siguientes tecnologias:</p>
+                <p>Es una aplicación web destinada a organizar y gestionar eventos virtuales. Permite a los usuarios crear, administrar y asistir a eventos en línea, facilitando la interacción y colaboración entre los participantes a través de diversas herramientas y funciones integradas. Utiliza las siguientes tecnologías:</p>
                 <ul>
                     <li>Frontend: HTML5, CSS3, JavaScript, Angular</li>
                     <li>Backend: Node.js, Express.js, Firebase para la gestión en tiempo real</li>
@@ -41,7 +46,6 @@
                 </ul>
 
                 <h3>Futuras mejoras</h3>
-                <p>Si el código fuente está disponible, puedes incluir un enlace a tu repositorio en GitHub u otra plataforma similar.</p>
                 <ul>
                     <li>Integración con Redes Sociales: Compartir eventos en redes sociales para aumentar la visibilidad y participación.</li>
                     <li>Aplicación Móvil: Desarrollo de una aplicación móvil para facilitar el acceso y gestión de eventos desde cualquier lugar.</li>
@@ -58,9 +62,7 @@
                     <li>Gestión de Participantes: Posibilidad de invitar y gestionar la lista de participantes, incluyendo confirmaciones de asistencia y envío de recordatorios.</li>
                     <li>Calendario Integrado: Visualización de eventos en un calendario, con opciones para agregar eventos a calendarios personales como Google Calendar o Outlook.</li>
                     <li>Notificaciones Push: Envío de notificaciones push para recordar a los usuarios sobre los próximos eventos y actualizaciones importantes.</li>
-
                 </ul>
-
             </div>
         </div>
     </div>
@@ -79,12 +81,9 @@
         nav.classList.add("active");
     }, 500); // Ajusta el retraso según sea necesario
 });
-
 </script>
 
 <script src="script.js"></script>
 <script src="proyecto.js"></script>
-
-
 </body>
 </html>

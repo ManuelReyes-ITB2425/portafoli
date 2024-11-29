@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header class="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Sobre mí</a></li>
-                <li><a href="proyectos.html">Proyectos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="menu">
+            <div class="nav-container">
+                <a href="index.html">
+                    <img src="logopropio.jpg" alt="Logo" id="logo">
+                </a>
+                <ul class="nav-list">
+                    <li><a href="index.html">Sobre mí</a></li>
+                    <li><a href="proyectos.html">Proyectos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -49,16 +53,13 @@
     </footer>
 
 <script>
-
 document.addEventListener("DOMContentLoaded", function() {
     const nav = document.querySelector("nav");
 
-    // Añadir la clase 'active' al menú de navegación cuando se carga la página
     setTimeout(() => {
         nav.classList.add("active");
-    }, 500); // Ajusta el retraso según sea necesario
+    }, 500);
 
-    // Efecto de scroll suave para enlaces internos (anclas)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -68,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Animaciones al cargar la página: Desvanecimiento de los elementos principales
     const fadeElements = document.querySelectorAll('.proyecto-individual-section, .proyecto-individual-titulo, .proyecto-individual-descripcion, .proyecto-individual-imagen-funcionalidades');
 
     fadeElements.forEach(el => {
@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
         el.style.transform = 'translateY(20px)';
     });
 
-    // Función para hacer que los elementos aparezcan con una animación de desvanecimiento
     window.addEventListener('scroll', () => {
         fadeElements.forEach(el => {
             const rect = el.getBoundingClientRect();
@@ -88,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Modal para la imagen del proyecto
     const projectImage = document.querySelector('.proyecto-individual-imagen');
     const modal = document.createElement('div');
     modal.classList.add('modal');
@@ -98,18 +96,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     projectImage.addEventListener('click', () => {
         modalImage.src = projectImage.src;
-        modal.style.display = 'flex'; // Mostrar el modal
+        modal.style.display = 'flex';
     });
 
     modal.addEventListener('click', () => {
-        modal.style.display = 'none'; // Ocultar el modal cuando se hace clic fuera de la imagen
+        modal.style.display = 'none';
     });
 });
-
 </script>
 
 <script src="script.js"></script>
-
-
 </body>
 </html>
